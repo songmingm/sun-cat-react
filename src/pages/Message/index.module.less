@@ -1,0 +1,49 @@
+.container {
+  padding: 1rem;
+
+  :global .adm-list {
+    --prefix-padding-right: 1rem;
+  }
+  // 列表体
+  :global .adm-list-body {
+    --border-bottom: none;
+    --border-inner: none;
+    --border-top: none;
+  }
+  // 列表项
+  :global .adm-list-item {
+    margin: 0.5rem 0 1.5rem 0;
+  }
+
+  .messageTitle {
+    display: flex;
+    justify-content: space-between;
+    .name {
+      font-size: 1rem;
+    }
+    .time {
+      font-size: 0.9rem;
+      color: #94949e;
+    }
+  }
+  .messageDetail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #94949e;
+    .content {
+      width: 10rem;
+      .text-ellipsis()
+    }
+    .count {
+      width: 1.9rem;
+      height: 1.2rem;
+      text-align: center;
+      font-size: 0.7rem;
+      line-height: 1.2rem;
+      border-radius: 1.5rem;
+      color: #fff;
+      background-color: var(--badge-color);
+    }
+  }
+}

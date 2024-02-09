@@ -1,0 +1,71 @@
+/* 
+  注：为什么要写两个重复的 :root？
+  由于 antd-mobile 中的主题变量也是在 :root 下声明的。
+  所以在有些情况下会由于优先级的问题无法成功覆盖。
+  通过 :root:root 可以显式地让你所写内容的优先级更高一些，从而确保主题变量的成功覆盖。
+ */
+:root:root {
+  // 主色
+  --adm-color-primary: var(--primary-color);
+  // 背景色
+  --adm-color-background: var(--bg-color);
+  // 字体色
+  --adm-color-text-secondary: var(--font-color);
+  // placeholder 文字颜色
+  --adm-color-light: var(--fill-color);
+  // 字体色
+  --adm-color-text: var(--font-color);
+}
+
+// form 样式
+.adm-list-item-content {
+  // 表单项下的分割线
+  --border-inner: none;
+}
+// toast 样式
+.adm-toast-mask .adm-toast-main {
+  background-color: #e0e0e0;
+  color: #000;
+  padding: 25px 12px;
+  .adm-toast-icon {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// input 样式
+.adm-input {
+  background-color: var(--place-color);
+  height: 37px;
+  border-radius: 100px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+// search bar 样式
+.adm-search-bar {
+  --height: 40px;
+  --padding-left: 0;
+  --border-radius: 100px;
+  .adm-search-bar-input-box {
+    background-color: var(--place-color);
+    border: none;
+    padding: 0 15px;
+  }
+}
+
+// selector 选择器样式
+.adm-selector-item {
+  --text-color: #999999;
+  border-radius: 100px;
+  background-color: var(--place-color);
+}
+
+// button 样式
+.adm-button {
+  // border: none;
+}
+//  外边框
+.adm-button-fill-outline {
+  background-color: #eeeeee;
+}

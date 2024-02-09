@@ -1,0 +1,26 @@
+.toggle {
+  background-color: @backgroudColor;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1);
+  line-height: 1;
+
+  .icon {
+    width: 27px;
+    height: 27px;
+    fill: @fillColor;
+    animation: theme-animation 0.8s ease 1 normal;
+  }
+}
+@keyframes theme-animation {
+  0% {
+    transform: rotate(360deg) scale(0);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}

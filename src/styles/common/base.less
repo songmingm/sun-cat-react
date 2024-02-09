@@ -1,0 +1,18 @@
+// 不需要随主题变化的固定全局样式
+@backgroudColor: #fff;
+@fillColor: #000;
+
+// 单行文本超出后显示省略号 
+.text-ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+// 子元素垂直水平居中
+.all-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

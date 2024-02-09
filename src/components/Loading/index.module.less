@@ -1,0 +1,69 @@
+// 辅助色
+@auxiliaryColor: #e0dfdf;
+.container {
+  .all-center;
+  width: 100vw;
+  height: 100vh;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    .ball1 {
+      --size: 16px;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 11px;
+      margin: 0 10px;
+      animation: 2s bounce ease infinite;
+      background-color: #4285f5;
+    }
+
+    .ball2 {
+      --size: 16px;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 11px;
+      margin: 0 10px;
+  
+      animation: 2s bounce ease infinite;
+      background-color: #ea4436;
+      animation-delay: 0.25s;
+    }
+
+    .ball3 {
+      --size: 16px;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 11px;
+      margin: 0 10px;
+  
+      animation: 2s bounce ease infinite;
+      background-color: #fbbd06;
+      animation-delay: 0.5s;
+    }
+
+    .ball4 {
+      --size: 16px;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 11px;
+      margin: 0 10px;
+  
+      animation: 2s bounce ease infinite;
+      background-color: #34a952;
+      animation-delay: 0.75s;
+    }
+  }
+
+  @keyframes bounce {
+    50% {
+      transform: translateY(25px);
+    }
+  }
+
+  .tip {
+    margin-top: 1rem;
+  }
+}

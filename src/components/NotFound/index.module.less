@@ -1,0 +1,124 @@
+@keyframes square-animation {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  10.5% {
+    left: 0;
+    top: 0;
+  }
+
+  12.5% {
+    left: 32px;
+    top: 0;
+  }
+
+  23% {
+    left: 32px;
+    top: 0;
+  }
+
+  25% {
+    left: 64px;
+    top: 0;
+  }
+
+  35.5% {
+    left: 64px;
+    top: 0;
+  }
+
+  37.5% {
+    left: 64px;
+    top: 32px;
+  }
+
+  48% {
+    left: 64px;
+    top: 32px;
+  }
+
+  50% {
+    left: 32px;
+    top: 32px;
+  }
+
+  60.5% {
+    left: 32px;
+    top: 32px;
+  }
+
+  62.5% {
+    left: 32px;
+    top: 64px;
+  }
+
+  73% {
+    left: 32px;
+    top: 64px;
+  }
+
+  75% {
+    left: 0;
+    top: 64px;
+  }
+
+  85.5% {
+    left: 0;
+    top: 64px;
+  }
+
+  87.5% {
+    left: 0;
+    top: 32px;
+  }
+
+  98% {
+    left: 0;
+    top: 32px;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+@square-count: 7;
+.container {
+  width: 100vw;
+  height: 100vh;
+  .all-center;
+  .loader {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    transform: rotate(45deg);
+
+    .loaderSquare {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      margin: 2px;
+      border-radius: 0px;
+      background: var(--primary-color);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      animation: square-animation 10s ease-in-out infinite both;
+
+      .animate-square(@square-count);
+      .animate-square(@n) when (@n > 0) {
+        &:nth-of-type(@{n}) {
+          animation-delay: (@n - 1) * -1.4285714286s;
+        }
+        .animate-square(@n - 1);
+      }
+    }
+  }
+  .tip {
+    margin-top: 1rem;
+  }
+}
